@@ -1,3 +1,7 @@
+Appboy's NUI Fork
+===
+This fork does not require ARC be enabled in your project to use NUI theming.
+
 NUI
 ===
 Style iOS apps with a style sheet, similar to CSS

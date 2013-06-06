@@ -56,40 +56,40 @@
     [smallButton setFrame:CGRectMake(20, 145, 57, 24)];
     [self.view addSubview:smallButton];
     
-    UILabel *largeLabel = [[UILabel alloc] initWithFrame:CGRectMake(167, 25, 133, 40)];
+    UILabel *largeLabel = [[[UILabel alloc] initWithFrame:CGRectMake(167, 25, 133, 40)] autorelease];
     [largeLabel setText:@"Large Label"];
     [largeLabel setNuiClass:@"Label:LargeLabel"];
     [self.view addSubview:largeLabel];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(110, 92, 62, 32)];
+    UILabel *label = [[[UILabel alloc] initWithFrame:CGRectMake(110, 92, 62, 32)] autorelease];
     [label setText:@"Label"];
     [self.view addSubview:label];
     
-    UILabel *smallLabel = [[UILabel alloc] initWithFrame:CGRectMake(92, 146, 52, 21)];
+    UILabel *smallLabel = [[[UILabel alloc] initWithFrame:CGRectMake(92, 146, 52, 21)] autorelease];
     [smallLabel setText:@"Small"];
     [smallLabel setNuiClass:@"Label:SmallLabel"];
     [self.view addSubview:smallLabel];
     
-    UITextField *largeTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 189, 159, 31)];
+    UITextField *largeTextField = [[[UITextField alloc] initWithFrame:CGRectMake(20, 189, 159, 31)] autorelease];
     [largeTextField setPlaceholder:@"Large Field"];
     [largeTextField setNuiClass:@"TextField:LargeTextField"];
     [largeTextField setReturnKeyType:UIReturnKeyDone];
     [largeTextField setDelegate:self];
     [self.view addSubview:largeTextField];
     
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(20, 257, 93, 31)];
+    UITextField *textField = [[[UITextField alloc] initWithFrame:CGRectMake(20, 257, 93, 31)] autorelease];
     [textField setPlaceholder:@"Text Field"];
     [textField setReturnKeyType:UIReturnKeyDone];
     [textField setDelegate:self];
     [self.view addSubview:textField];
     
     NSArray *items = [NSArray arrayWithObjects: @"Segmented", @"Control", nil];
-    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:items];
+    UISegmentedControl *segmentedControl = [[[UISegmentedControl alloc] initWithItems:items] autorelease];
     [segmentedControl setFrame:CGRectMake(20, 318, 190, 30)];
     [segmentedControl setSelectedSegmentIndex:0];
     [self.view addSubview:segmentedControl];
-    
-    UISwitch *uiSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(223, 319, 79, 27)];
+  
+    UISwitch *uiSwitch = [[[UISwitch alloc] initWithFrame:CGRectMake(223, 319, 79, 27)] autorelease];
     [uiSwitch setOn:YES];
     [self.view addSubview:uiSwitch];
 }
