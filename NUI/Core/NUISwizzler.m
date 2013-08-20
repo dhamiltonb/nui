@@ -33,6 +33,11 @@
     [self swizzleAwakeFromNib:[UITabBarItem class]];
     // didMoveToWindow isn't called on UIBarButtonItem when loaded from a pushed storyboard, use awakeFromNib instead
     [self swizzleAwakeFromNib:[UIBarButtonItem class]];
+
+    // to remove the observer from notification, we need to call dealloc
+    [self swizzleDealloc:[UITabBar class]];
+    [self swizzleDealloc:[UINavigationBar class]];
+    [self swizzleDealloc:[UITableViewCell class]];
     
     [self swizzle:[UITextField class] methodName:@"textRectForBounds:"];
     [self swizzle:[UITextField class] methodName:@"editingRectForBounds:"];
