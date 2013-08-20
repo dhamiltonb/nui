@@ -58,6 +58,7 @@
     CGPathAddArcToPoint(path, NULL, dWidth, borderWidth, dWidth, borderWidth + cornerRadius, cornerRadius);
     CGPathAddLineToPoint(path, NULL, dWidth, dHeight - cornerRadius);
     shape.path = path;
+    CFRelease(path);
     
     UIEdgeInsets insets = UIEdgeInsetsMake(1, arrowWidth + 5, 1, cornerRadius + 5);
     UIImage *image = [self caLayerToUIImage:shape];
@@ -67,8 +68,6 @@
         image = [image resizableImageWithCapInsets:insets];
     }
   
-  
-    CGPathRelease(path);
     return image;
 }
 
